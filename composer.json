@@ -1,0 +1,53 @@
+{
+	"name" : "yiisoft/yii2-app-advanced",
+	"description" : "Yii 2 Advanced Application Template",
+	"type" : "project",
+	"keywords" : [
+		"yii2",
+		"framework",
+		"advanced",
+		"application template"
+	],
+	"homepage" : "http://www.yiiframework.com/",
+	"license" : [
+		"BSD-3-Clause"
+	],
+	"require" : {
+		"yiisoft/yii2-elasticsearch" : "2.0.*@dev",
+		"sheillendra/yii2-jeasyui" : "dev-master",
+		"yiisoft/yii2-swiftmailer" : "*",
+		"php" : ">=5.4.0",
+		"yiisoft/yii2-redis" : "2.0.*@dev",
+		"yiisoft/yii2-mongodb" : "2.0.*@dev",
+		"yiisoft/yii2-bootstrap" : "*",
+		"yiisoft/yii2" : "*"
+	},
+	"require-dev" : {
+		"yiisoft/yii2-debug" : "*",
+		"yiisoft/yii2-gii" : "*",
+		"yiisoft/yii2-faker" : "*",
+		"yiisoft/yii2-codeception" : "*"
+	},
+	"minimum-stability" : "dev",
+	"support" : {
+		"forum" : "http://www.yiiframework.com/forum/",
+		"source" : "https://github.com/yiisoft/yii2",
+		"issues" : "https://github.com/yiisoft/yii2/issues?state=open",
+		"irc" : "irc://irc.freenode.net/yii",
+		"wiki" : "http://www.yiiframework.com/wiki/"
+	},
+	"repositories" : [{
+			"type" : "composer",
+			"url" : "http://pkg.phpcomposer.com/repo/packagist/"
+		}
+	],
+	"config" : {
+		"process-timeout" : 1800
+	},
+	"extra" : {
+		"asset-installer-paths" : {
+			"npm-asset-library" : "vendor/npm",
+			"bower-asset-library" : "vendor/bower"
+		}
+	}
+}
