@@ -3,9 +3,9 @@ namespace backend\controllers;
 
 use Yii;
 use yii\filters\AccessControl;
-use yii\web\Controller;
-use common\models\LoginForm;
 use yii\filters\VerbFilter;
+use yii\web\Controller;
+use backend\models\LoginForm;
 
 /**
  * Site controller
@@ -61,7 +61,7 @@ class SiteController extends Controller
     /**
      * 登陆
      * 
-     * admin/123456
+     * admin888/admin888
      * 
      * @return Ambigous <\yii\web\Response, \yii\web\static, \yii\web\Response>|Ambigous <string, string>
      */
@@ -72,6 +72,7 @@ class SiteController extends Controller
         }
 
         $model = new LoginForm();
+        
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         } else {
@@ -86,10 +87,5 @@ class SiteController extends Controller
         Yii::$app->user->logout();
 
         return $this->goHome();
-    }
-    
-    public function actionTest(){
-    	
-    	return $this->render('test');
     }
 }

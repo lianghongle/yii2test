@@ -10,5 +10,4 @@ class BaseTestController extends BaseController
 		
 		return $this->render('base');
 	}
-	
 }

@@ -16,7 +16,7 @@ if (!YII_ENV_TEST) {
     $config['modules']['debug'] = [
 		'class' => 'yii\\debug\\Module',
 		//如果是访问虚拟机，要用和虚拟机一个网段的那个ip
-		'allowedIPs' => ['192.168.126.1', '127.0.0.1', '::1'],
+		'allowedIPs' => ['192.168.27.1', '127.0.0.1', '::1'],
 		'panels' => [
 			'elasticsearch' => [
 				'class' => 'yii\\elasticsearch\\DebugPanel',
@@ -30,7 +30,7 @@ if (!YII_ENV_TEST) {
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
 		'class' => 'yii\gii\Module',
-		'allowedIPs' => ['192.168.126.1','127.0.0.1', '::1', '192.168.0.*'] // adjust this to your needs
+		'allowedIPs' => ['192.168.27.1','127.0.0.1', '::1', '192.168.0.*'] // adjust this to your needs
     ];
 }
 
