@@ -90,8 +90,6 @@ class SiteController extends Controller
     
     public function actionTest(){
     	
-    	echo 'aa';
-    	
     	return $this->render('test');
     }
 }

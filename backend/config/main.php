@@ -1,4 +1,5 @@
 <?php
+
 $params = array_merge(
     require(__DIR__ . '/../../common/config/params.php'),
     require(__DIR__ . '/../../common/config/params-local.php'),
@@ -12,12 +13,21 @@ return [
     'language' => 'zh-CN', 
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+	    'admin' => [
+	    	'class' => 'backend\modules\admin\admin',
+	    ],
+	],
     'components' => [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
+//         'admin' => [
+// 	        'identityClass' => 'backend\modules\admin\models\Admin',
+// 	        'class' => 'backend\modules\admin\models\Admin',
+// 	        'enableAutoLogin' => true,
+//         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
