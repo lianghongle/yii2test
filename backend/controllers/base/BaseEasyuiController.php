@@ -2,7 +2,7 @@
 
 namespace backend\controllers\base;
 
-class BaseEasyuiController extends BaseController
+class BaseEasyuiController extends Controller
 {
 	public $layout = 'easyui';
 	

@@ -2,7 +2,9 @@
 
 namespace backend\controllers;
 
-class TestEasyuiController extends \backend\controllers\base\BaseEasyuiController
+use backend\controllers\BaseEasyuiController;
+
+class TestEasyuiController extends BaseEasyuiController
 {
 	public function actionIndex()
 	{

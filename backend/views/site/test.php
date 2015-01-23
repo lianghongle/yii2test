@@ -3,5 +3,6 @@
 
 $this->title = 'My Yii Application';
 
+echo 'aa';
 ?>
 

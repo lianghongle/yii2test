@@ -10,4 +10,9 @@ return [
     	require (__DIR__ . '/' . YII_ENV . '/mongodb.php'),
     	require (__DIR__ . '/' . YII_ENV . '/elasticsearch.php')
     ),
+//     'components' => [
+// 	    'cache' => [
+// 		    'class' => 'yii\caching\FileCache',
+// 	    ],
+//     ],
 ];

@@ -8,40 +8,26 @@ $params = array_merge(
 );
 
 return [
-
     'id' => 'app-backend',
-
     'basePath' => dirname(__DIR__),
-    
     'language' => 'zh-CN', 
-    
     'controllerNamespace' => 'backend\controllers',
-    
     'bootstrap' => ['log'],
-    
-    //启用模块
     'modules' => [
 	    'admin' => [
 	    	'class' => 'backend\modules\admin\admin',
 	    ],
 	],
-    
-	//使用组件
     'components' => [
-    
-    	//普通用户
         'user' => [
-            'identityClass' => 'backend\models\User',
+            'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
         ],
-        
-        //后台管理员
 //         'admin' => [
-// 	        'identityClass' => 'backend\modules\admin\models\User',
-// 	        'class' => 'yii\web\User',
+// 	        'identityClass' => 'backend\modules\admin\models\Admin',
+// 	        'class' => 'backend\modules\admin\models\Admin',
 // 	        'enableAutoLogin' => true,
 //         ],
-        
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
@@ -51,12 +37,10 @@ return [
                 ],
             ],
         ],
-        
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
         
-        //国际化
         'i18n' => [
 	        'translations' => [
 		        '*' => [
@@ -72,6 +56,5 @@ return [
         ],
         
     ],
-    
     'params' => $params,
 ];

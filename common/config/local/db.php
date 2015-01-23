@@ -4,7 +4,7 @@ return [
 	// default
 	'db' => [ 
 		'class' => '\yii\db\Connection',
-		'dsn' => 'mysql:host=192.168.27.128;port=3306;dbname=yii2test',
+		'dsn' => 'mysql:host=192.168.126.129;port=3306;dbname=yii2test',
 		'username' => 'root',
 		'password' => 'lhl',
 		'tablePrefix' => '',
